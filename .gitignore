@@ -1,0 +1,24 @@
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Node (si on ajoute des outils de build plus tard)
+node_modules/
+npm-debug.log*
+
+# Claude Code
+.claude/
+
+# Fichiers sensibles
+.env
+.env.local

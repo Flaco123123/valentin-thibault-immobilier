@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentin Thibault — Conseiller Immobilier SAFTI · Poitiers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --or:#e05519;
+  --or2:#c44914;
+  --ink:#1a1a1a;
+  --txt:#2d2d2d;
+  --mut:#6b6060;
+  --light:#f7f4ef;
+  --lighter:#fdfcfa;
+  --border:#e8e2d9;
+  --white:#fff;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--txt);background:var(--lighter);overflow-x:hidden}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem 2.5rem;z-index:200;
+  transition:box-shadow .3s;
+}
+nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08)}
+.nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.nav-logo img{width:36px;height:36px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--or)}
+.nav-logo-txt{font-family:'Cormorant Garant',serif;font-size:1.15rem;font-weight:700;color:var(--ink)}
+.nav-logo-txt span{color:var(--or)}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{font-size:.8rem;font-weight:500;color:var(--mut);text-decoration:none;letter-spacing:.04em;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{background:var(--or);color:#fff;padding:.65rem 1.4rem;font-size:.8rem;font-weight:600;text-decoration:none;border-radius:2px;transition:background .2s,transform .15s}
+.nav-cta:hover{background:var(--or2);transform:translateY(-1px)}
+
+/* ── HERO ── */
+#hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;align-items:center;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-image:url('https://images.pexels.com/photos/5997993/pexels-photo-5997993.jpeg?auto=compress&cs=tinysrgb&w=1920');
+  background-size:cover;
+  background-position:center 50%;
+}
+.hero-ov{
+  position:absolute;inset:0;
+  background:linear-gradient(110deg,rgba(253,250,246,.96) 0%,rgba(253,250,246,.90) 38%,rgba(253,250,246,.55) 65%,rgba(253,250,246,.15) 100%);
+}
+.hero-inner{
+  position:relative;z-index:2;
+  max-width:1200px;margin:0 auto;width:100%;
+  padding:9rem 2.5rem 5rem;
+  display:grid;grid-template-columns:1.2fr 1fr;
+  align-items:center;gap:5rem;
+}
+
+/* eyebrow */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.65rem;
+  font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--or);margin-bottom:1.6rem;
+}
+.eyebrow::before{content:'';width:28px;height:2px;background:var(--or);display:inline-block;flex-shrink:0}
+
+h1{
+  font-family:'Cormorant Garant',serif;
+  font-size:clamp(3.2rem,5.5vw,5.2rem);
+  font-weight:700;line-height:1.06;
+  color:var(--ink);margin-bottom:1.4rem;
+}
+h1 em{font-style:italic;color:var(--or);font-weight:300}
+
+.hero-sub{
+  font-size:1.02rem;line-height:1.8;
+  color:var(--mut);max-width:440px;margin-bottom:2.4rem;
+}
+.hero-sub strong{color:var(--ink);font-weight:500}
+
+.hero-actions{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap}
+.btn-or{background:var(--or);color:#fff;padding:.9rem 2.2rem;font-size:.9rem;font-weight:600;text-decoration:none;border-radius:2px;transition:background .2s,transform .15s;display:inline-block}
+.btn-or:hover{background:var(--or2);transform:translateY(-2px)}
+.btn-ghost{font-size:.86rem;font-weight:500;color:#999;text-decoration:none;border-bottom:1px solid #d4cec6;padding-bottom:2px;transition:color .2s,border-color .2s}
+.btn-ghost:hover{color:var(--ink);border-color:var(--ink)}
+
+/* Photo ronde droite */
+.hero-right{display:flex;flex-direction:column;align-items:center;gap:1.6rem}
+.pring{position:relative;width:260px;height:260px;flex-shrink:0}
+.pr1{position:absolute;width:240px;height:240px;border-radius:50%;border:1.5px solid rgba(224,85,25,.18);top:10px;left:10px}
+.pr2{position:absolute;width:200px;height:200px;border-radius:50%;background:rgba(224,85,25,.05);top:30px;left:30px}
+.pr-photo{width:220px;height:220px;border-radius:50%;object-fit:cover;object-position:center top;position:absolute;top:20px;left:20px;border:5px solid rgba(255,255,255,.95);box-shadow:0 8px 40px rgba(0,0,0,.13);z-index:2}
+.pr-avail{position:absolute;bottom:12px;right:-6px;background:#fff;border-radius:100px;padding:.38rem .9rem .38rem .5rem;display:flex;align-items:center;gap:.4rem;box-shadow:0 4px 16px rgba(0,0,0,.12);font-size:.7rem;font-weight:600;color:#444;z-index:3;white-space:nowrap}
+.pr-dot{width:7px;height:7px;border-radius:50%;background:#2ec76a;flex-shrink:0;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+.agent-name{font-family:'Cormorant Garant',serif;font-size:1.35rem;font-weight:700;color:var(--ink);text-align:center}
+.agent-title{font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#aaa;margin-top:.3rem;text-align:center}
+.hero-pills{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center}
+.hero-pill{background:rgba(255,255,255,.9);border:1px solid var(--border);border-radius:100px;padding:.42rem 1rem;font-size:.74rem;font-weight:500;color:#666;box-shadow:0 2px 10px rgba(0,0,0,.05);display:flex;align-items:center;gap:.38rem}
+.hero-pill b{color:var(--or);font-weight:700}
+.hero-contact{font-size:.8rem;color:#aaa;display:flex;align-items:center;gap:.4rem}
+.hero-contact a{color:var(--or);font-weight:500;text-decoration:none}
+.hero-contact a:hover{text-decoration:underline}
+
+/* ── STATS ── */
+#stats{background:#fff;border-bottom:1px solid var(--border)}
+.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:2.2rem 2rem;border-right:1px solid var(--border);text-align:center}
+.stat:last-child{border-right:none}
+.stat-n{font-family:'Cormorant Garant',serif;font-size:2.8rem;font-weight:700;color:var(--or);line-height:1;margin-bottom:.35rem}
+.stat-l{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#bbb}
+
+/* ── SECTIONS ── */
+.section{padding:6rem 2.5rem}
+.section-inner{max-width:1200px;margin:0 auto}
+.sec-tag{display:flex;align-items:center;gap:.7rem;margin-bottom:1.2rem}
+.sec-tag-dash{width:24px;height:2px;background:var(--or)}
+.sec-tag-txt{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--or)}
+h2{font-family:'Cormorant Garant',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:700;line-height:1.12;color:var(--ink);margin-bottom:1rem}
+h2 em{font-style:italic;color:var(--or);font-weight:300}
+
+/* ── ANNONCES ── */
+#annonces{background:var(--lighter)}
+.annonces-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3rem;flex-wrap:wrap;gap:1rem}
+.see-all{font-size:.82rem;font-weight:500;color:var(--or);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+.see-all:hover{border-color:var(--or)}
+.annonces-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.bien-card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,.06);transition:box-shadow .3s,transform .3s;text-decoration:none;color:inherit;display:block}
+.bien-card:hover{box-shadow:0 8px 40px rgba(0,0,0,.11);transform:translateY(-4px)}
+.bien-img{position:relative;overflow:hidden;height:185px}
+.bien-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.bien-card:hover .bien-img img{transform:scale(1.04)}
+.bien-badge{position:absolute;top:.8rem;left:.8rem;background:var(--or);color:#fff;font-size:.64rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .65rem;border-radius:2px}
+.bien-body{padding:1rem 1.1rem 1.2rem}
+.bien-prix{font-family:'Cormorant Garant',serif;font-size:1.55rem;font-weight:700;color:var(--ink);margin-bottom:.2rem}
+.bien-type{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--or);margin-bottom:.4rem}
+.bien-lieu{font-size:.8rem;color:var(--mut);margin-bottom:.6rem}
+.bien-specs{display:flex;gap:.4rem;flex-wrap:wrap}
+.spec{background:var(--light);color:var(--mut);font-size:.67rem;font-weight:500;padding:.2rem .55rem;border-radius:3px}
+
+/* ── VENDUS ── */
+#vendus{background:#fff}
+.vendus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.vendu-card{border-radius:10px;overflow:hidden;border:1px solid var(--border);transition:box-shadow .3s,transform .3s}
+.vendu-card:hover{box-shadow:0 8px 40px rgba(0,0,0,.1);transform:translateY(-3px)}
+.vendu-img{position:relative;height:170px;overflow:hidden}
+.vendu-img img{width:100%;height:100%;object-fit:cover}
+.vendu-stamp{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(20,140,70,.78)}
+.vendu-stamp span{font-family:'Cormorant Garant',serif;font-size:1.55rem;font-weight:700;color:#fff;letter-spacing:.15em;text-transform:uppercase;border:2.5px solid rgba(255,255,255,.7);padding:.2rem 1rem;transform:rotate(-8deg);display:block}
+.vendu-body{padding:.9rem 1.1rem 1rem;background:#fff}
+.vendu-type{font-size:.68rem;font-weight:700;color:var(--or);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.2rem}
+.vendu-desc{font-size:.85rem;color:var(--ink);font-weight:500;margin-bottom:.2rem}
+.vendu-lieu{font-size:.75rem;color:var(--mut)}
+
+/* ── APPROCHE ── */
+#approche{background:var(--ink);position:relative;overflow:hidden}
+#approche::before{content:'';position:absolute;top:-100px;right:-100px;width:450px;height:450px;border-radius:50%;background:radial-gradient(circle,rgba(224,85,25,.12) 0%,transparent 70%)}
+.approche-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.approche-left h2{color:#fff;margin-bottom:1.4rem}
+.approche-left h2 em{color:#f0b07a}
+.approche-intro{font-size:.97rem;line-height:1.8;color:rgba(255,255,255,.58);margin-bottom:2rem}
+.approche-intro strong{color:rgba(255,255,255,.88);font-weight:500}
+.approche-contacts{display:flex;flex-direction:column;gap:.6rem}
+.approche-contact{display:flex;align-items:center;gap:.8rem;font-size:.88rem;color:rgba(255,255,255,.65)}
+.approche-contact a{color:rgba(255,255,255,.65);text-decoration:none;transition:color .2s}
+.approche-contact a:hover{color:#fff}
+.contact-ico{width:32px;height:32px;border-radius:50%;background:rgba(224,85,25,.18);border:1px solid rgba(224,85,25,.28);display:flex;align-items:center;justify-content:center;font-size:.88rem;flex-shrink:0}
+.piliers{display:flex;flex-direction:column;gap:1.1rem}
+.pilier{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:1.3rem 1.5rem;display:flex;align-items:flex-start;gap:1.1rem;transition:background .3s,border-color .3s}
+.pilier:hover{background:rgba(255,255,255,.07);border-color:rgba(224,85,25,.28)}
+.pilier-num{font-family:'Cormorant Garant',serif;font-size:2rem;font-weight:700;color:rgba(224,85,25,.35);line-height:1;flex-shrink:0;width:36px;transition:color .3s}
+.pilier:hover .pilier-num{color:var(--or)}
+.pilier h3{font-size:.9rem;font-weight:600;color:#fff;margin-bottom:.3rem}
+.pilier p{font-size:.8rem;line-height:1.62;color:rgba(255,255,255,.48)}
+
+/* ── TÉMOIGNAGES ── */
+#temoignages{background:var(--light)}
+.temo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:3rem}
+.temo{background:#fff;border-radius:10px;padding:1.8rem 2rem;box-shadow:0 2px 16px rgba(0,0,0,.05);position:relative;transition:box-shadow .3s}
+.temo:hover{box-shadow:0 8px 40px rgba(0,0,0,.1)}
+.temo-stars{color:#f0a030;font-size:.88rem;margin-bottom:.8rem;letter-spacing:.04em}
+.temo-date{font-size:.68rem;color:#ccc;margin-bottom:.6rem;letter-spacing:.05em}
+.temo-title{font-family:'Cormorant Garant',serif;font-size:1.08rem;font-weight:700;color:var(--ink);margin-bottom:.6rem}
+.temo-txt{font-size:.86rem;line-height:1.72;color:var(--mut);margin-bottom:1.2rem;font-style:italic}
+.temo-txt strong{color:var(--txt);font-style:normal;font-weight:500}
+.temo-author{display:flex;align-items:center;gap:.7rem;border-top:1px solid var(--border);padding-top:1rem}
+.temo-av{width:34px;height:34px;border-radius:50%;background:var(--or);color:#fff;font-size:.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.temo-name{font-size:.82rem;font-weight:600;color:var(--ink)}
+.temo-lieu{font-size:.7rem;color:var(--mut)}
+.temo-featured{grid-column:1/-1;background:var(--or);color:#fff}
+.temo-featured .temo-title,.temo-featured .temo-stars{color:#fff}
+.temo-featured .temo-txt{color:rgba(255,255,255,.82);font-size:.9rem}
+.temo-featured .temo-txt strong{color:#fff}
+.temo-featured .temo-author{border-color:rgba(255,255,255,.2)}
+.temo-featured .temo-name{color:#fff}
+.temo-featured .temo-lieu{color:rgba(255,255,255,.65)}
+.temo-featured .temo-av{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3)}
+.temo-featured .temo-date{color:rgba(255,255,255,.5)}
+
+/* ── CONTACT ── */
+#contact{background:#fff;position:relative;overflow:hidden}
+#contact::before{content:'';position:absolute;bottom:0;left:0;right:0;height:40%;background:var(--lighter)}
+.contact-wrap{position:relative;z-index:1;max-width:800px;margin:0 auto;text-align:center}
+#contact h2{margin-bottom:.8rem}
+.contact-sub{font-size:.98rem;color:var(--mut);line-height:1.72;max-width:500px;margin:0 auto 2.5rem}
+.contact-form{background:#fff;border-radius:14px;box-shadow:0 16px 60px rgba(0,0,0,.1);padding:2.4rem;text-align:left}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:.9rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.72rem;font-weight:700;color:var(--ink);letter-spacing:.06em;text-transform:uppercase}
+.form-group input,.form-group select,.form-group textarea{border:1.5px solid var(--border);border-radius:6px;padding:.75rem 1rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;color:var(--txt);background:#fff;outline:none;transition:border-color .2s,box-shadow .2s;resize:none;width:100%}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--or);box-shadow:0 0 0 3px rgba(224,85,25,.1)}
+.form-full{grid-column:1/-1}
+.btn-submit{width:100%;background:var(--or);color:#fff;border:none;border-radius:6px;padding:1rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;margin-top:.5rem;transition:background .2s,transform .15s}
+.btn-submit:hover{background:var(--or2);transform:translateY(-2px)}
+.contact-reassurance{display:flex;justify-content:center;gap:2rem;margin-top:1.4rem;flex-wrap:wrap}
+.reassurance{font-size:.76rem;color:var(--mut);display:flex;align-items:center;gap:.4rem}
+.reassurance::before{content:'✓';color:var(--or);font-weight:700}
+.contact-direct{display:flex;justify-content:center;gap:2.5rem;margin-top:1.8rem;flex-wrap:wrap}
+.contact-direct a{font-size:.88rem;color:var(--mut);text-decoration:none;display:flex;align-items:center;gap:.4rem;transition:color .2s}
+.contact-direct a:hover{color:var(--or)}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);padding:1.8rem 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:'Cormorant Garant',serif;font-size:1.05rem;font-weight:700;color:#fff}
+.footer-logo span{color:var(--or)}
+.footer-links{display:flex;gap:1.8rem;list-style:none}
+.footer-links a{font-size:.73rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:rgba(255,255,255,.8)}
+.footer-safti{font-size:.68rem;color:rgba(255,255,255,.28);letter-spacing:.1em;text-transform:uppercase}
+
+/* ── REVEAL ── */
+.r{}
+
+
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  nav{padding:.8rem 1.2rem}
+  .nav-links{display:none}
+  .hero-inner{grid-template-columns:1fr;padding:7rem 1.5rem 4rem;text-align:center}
+  .hero-right{display:none}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .section{padding:4rem 1.5rem}
+  .annonces-grid,.vendus-grid{grid-template-columns:1fr}
+  .approche-grid{grid-template-columns:1fr}
+  .temo-grid{grid-template-columns:1fr}
+  .temo-featured{grid-column:auto}
+  .form-row{grid-template-columns:1fr}
+  .contact-form{padding:1.5rem}
+  footer{flex-direction:column;text-align:center}
+  .footer-links{justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <img src="https://cdn.safti.fr/agent-photo/minisite/01JSH29WB1C5MB0Q52XPQNZXZF/petit.jpeg" alt="Valentin Thibault">
+    <span class="nav-logo-txt">Valentin <span>Thibault</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#annonces">Mes annonces</a></li>
+    <li><a href="#vendus">Succès récents</a></li>
+    <li><a href="#approche">Mon approche</a></li>
+    <li><a href="#temoignages">Témoignages</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Estimation gratuite</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow r v">Conseiller SAFTI · Poitiers &amp; alentours</div>
+      <h1 class="">
+        Votre projet,<br>
+        <em>mon expertise,</em><br>
+        votre quartier.
+      </h1>
+      <p class="hero-sub r v d2">
+        Je vous accompagne de <strong>la réflexion à la signature</strong> — avec un suivi personnalisé, une connaissance fine du marché local et une vraie disponibilité à chaque étape.
+      </p>
+      <div class="hero-actions r v d3">
+        <a href="#contact" class="btn-or">Estimation gratuite →</a>
+        <a href="#annonces" class="btn-ghost">Voir mes annonces</a>
+      </div>
+    </div>
+    <div class="hero-right r v d2">
+      <div class="pring">
+        <div class="pr1"></div>
+        <div class="pr2"></div>
+        <img src="https://cdn.safti.fr/agent-photo/minisite/01JSH29WB1C5MB0Q52XPQNZXZF/petit.jpeg" alt="Valentin Thibault" class="pr-photo">
+        <div class="pr-avail"><div class="pr-dot"></div>Disponible maintenant</div>
+      </div>
+      <div>
+        <div class="agent-name">Valentin Thibault</div>
+        <div class="agent-title">Conseiller indépendant · SAFTI</div>
+      </div>
+      <div class="hero-pills">
+        <div class="hero-pill"><b>22</b> avis ★★★★★</div>
+        <div class="hero-pill"><b>10</b> biens actifs</div>
+        <div class="hero-pill"><b>6</b> succès récents</div>
+      </div>
+      <div class="hero-contact">
+        📞 <a href="tel:0786861226">07 86 86 12 26</a>
+        &nbsp;·&nbsp;
+        ✉ <a href="mailto:valentin.thibault@safti.fr">valentin.thibault@safti.fr</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div id="stats">
+  <div class="stats-inner">
+    <div class="stat r"><div class="stat-n">22</div><div class="stat-l">Avis clients</div></div>
+    <div class="stat r d1"><div class="stat-n">6</div><div class="stat-l">Succès récents</div></div>
+    <div class="stat r d2"><div class="stat-n">10</div><div class="stat-l">Annonces actives</div></div>
+    <div class="stat r d3"><div class="stat-n">100<sup style="font-size:1.1rem;color:var(--or)">%</sup></div><div class="stat-l">Estimation gratuite</div></div>
+  </div>
+</div>
+
+<!-- ANNONCES -->
+<section id="annonces" class="section">
+  <div class="section-inner">
+    <div class="annonces-header r">
+      <div>
+        <div class="sec-tag"><div class="sec-tag-dash"></div><span class="sec-tag-txt">Biens à découvrir</span></div>
+        <h2>Mes annonces <em>en cours</em></h2>
+      </div>
+      <a href="https://www.safti.fr/votre-conseiller-safti/valentin-thibault" target="_blank" class="see-all">Toutes mes annonces →</a>
+    </div>
+    <div class="annonces-grid">
+
+      <a href="https://www.safti.fr/annonces/achat/appartement/poitiers-86000/1614481" target="_blank" class="bien-card r">
+        <div class="bien-img"><img src="https://cdn.safti.fr/bien-photo/61/14/1614481/ca53f8ec6d9fed40d63ac1189ec535c2d11c7d7b/g.jpg" alt="Appartement Poitiers" loading="lazy"><div class="bien-badge">Exclusivité</div></div>
+        <div class="bien-body">
+          <div class="bien-type">Appartement</div>
+          <div class="bien-prix">276 000 €</div>
+          <div class="bien-lieu">Poitiers (86000)</div>
+          <div class="bien-specs"><span class="spec">5 pièces</span><span class="spec">101 m²</span><span class="spec">3 ch.</span></div>
+        </div>
+      </a>
+
+      <a href="https://www.safti.fr/annonces/achat/maison/chabournay-86380/1579850" target="_blank" class="bien-card r d1">
+        <div class="bien-img"><img src="https://cdn.safti.fr/bien-photo/51/79/1579850/598badc3dcfeaea38c5a4e5579712babab1c8213/rg_nobn.jpg" alt="Maison Chabournay" loading="lazy"><div class="bien-badge">Exclusivité</div></div>
+        <div class="bien-body">
+          <div class="bien-type">Maison</div>
+          <div class="bien-prix">249 500 €</div>
+          <div class="bien-lieu">Chabournay (86380)</div>
+          <div class="bien-specs"><span class="spec">5 pièces</span><span class="spec">119 m²</span><span class="spec">839 m² terrain</span></div>
+        </div>
+      </a>
+
+      <a href="https://www.safti.fr/annonces/achat/appartement/poitiers-86000/1510955" target="_blank" class="bien-card r d2">
+        <div class="bien-img"><img src="https://cdn.safti.fr/bien-photo/51/10/1510955/1cf55038289bdd7caf300a700a82273c7f4ee1f3/rg_nobn.jpg" alt="Appartement Poitiers" loading="lazy"><div class="bien-badge">Exclusivité</div><div class="bien-badge" style="top:2.4rem;background:#888">Sous compromis</div></div>
+        <div class="bien-body">
+          <div class="bien-type">Appartement</div>
+          <div class="bien-prix">69 000 €</div>
+          <div class="bien-lieu">Poitiers (86000)</div>
+          <div class="bien-specs"><span class="spec">2 pièces</span><span class="spec">41 m²</span><span class="spec">1 ch.</span></div>
+        </div>
+      </a>
+
+      <a href="https://www.safti.fr/annonces/achat/maison/iteuil-86240/1445758" target="_blank" class="bien-card r">
+        <div class="bien-img"><img src="https://cdn.safti.fr/bien-photo/41/45/1445758/777284579e2cda0775ad3b83aaaa45cc9e1095fb/g.jpg" alt="Maison Iteuil" loading="lazy"></div>
+        <div class="bien-body">
+          <div class="bien-type">Maison</div>
+          <div class="bien-prix">274 000 €</div>
+          <div class="bien-lieu">Iteuil (86240)</div>
+          <div class="bien-specs"><span class="spec">6 pièces</span><span class="spec">155 m²</span><span class="spec">1 224 m²</span></div>
+        </div>
+      </a>
+
+      <a href="https://www.safti.fr/annonces/achat/appartement/poitiers-86000/1579260" target="_blank" class="bien-card r d1">
+        <div class="bien-img"><img src="https://cdn.safti.fr/bien-photo/51/79/1579260/1b87680a6318706ff3ab56fcd2a4e753ebf99e25/g.jpg" alt="Appartement Poitiers" loading="lazy"></div>
+        <div class="bien-body">
+          <div class="bien-type">Appartement</div>
+          <div class="bien-prix">111 000 €</div>
+          <div class="bien-lieu">Poitiers (86000)</div>
+          <div class="bien-specs"><span class="spec">2 pièces</span><span class="spec">52 m²</span><span class="spec">1 ch.</span></div>
+        </div>
+      </a>
+
+      <a href="https://www.safti.fr/annonces/achat/maison/sanxay-86600/1551047" target="_blank" class="bien-card r d2">
+        <div class="bien-img"><img src="https://cdn.safti.fr/bien-photo/51/51/1551047/0b2b9ef76d299eef35b296f280e80797d815f7de/rg_nobn.jpg" alt="Maison Sanxay" loading="lazy"><div class="bien-badge">Exclusivité</div></div>
+        <div class="bien-body">
+          <div class="bien-type">Maison</div>
+          <div class="bien-prix">134 000 €</div>
+          <div class="bien-lieu">Sanxay (86600)</div>
+          <div class="bien-specs"><span class="spec">4 pièces</span><span class="spec">89 m²</span><span class="spec">998 m²</span></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- SUCCÈS RÉCENTS -->
+<section id="vendus" class="section" style="padding-top:0">
+  <div class="section-inner">
+    <div class="" style="margin-bottom:2.5rem">
+      <div class="sec-tag"><div class="sec-tag-dash"></div><span class="sec-tag-txt">Mes succès récents</span></div>
+      <h2>Déjà <em>vendus</em></h2>
+    </div>
+    <div class="vendus-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="vendu-card r">
+        <div class="vendu-img"><img src="https://cdn.safti.fr/bien-photo/51/16/1516854/6c1a542fa0b262832e2eeb2aad0fbb1a00c60868/g.jpg" alt="Vendu" loading="lazy"><div class="vendu-stamp"><span>Vendu</span></div></div>
+        <div class="vendu-body"><div class="vendu-type">Appartement</div><div class="vendu-desc">3 pièces · 81 m²</div><div class="vendu-lieu">Poitiers (86000)</div></div>
+      </div>
+      <div class="vendu-card r d1">
+        <div class="vendu-img"><img src="https://cdn.safti.fr/bien-photo/51/10/1510951/d265f0f5084e2f3d12ddb16700754255a89bf834/rg_nobn.jpg" alt="Vendu" loading="lazy"><div class="vendu-stamp"><span>Vendu</span></div></div>
+        <div class="vendu-body"><div class="vendu-type">Appartement</div><div class="vendu-desc">2 pièces · 30 m²</div><div class="vendu-lieu">Poitiers (86000)</div></div>
+      </div>
+      <div class="vendu-card r d2">
+        <div class="vendu-img"><img src="https://cdn.safti.fr/bien-photo/41/68/1468087/6f8345478c74e7335b2e72618727400f2995c8e0/g.jpg" alt="Vendu" loading="lazy"><div class="vendu-stamp"><span>Vendu</span></div></div>
+        <div class="vendu-body"><div class="vendu-type">Maison</div><div class="vendu-desc">4 pièces · 102 m² · 59 m² terrain</div><div class="vendu-lieu">Poitiers (86000)</div></div>
+      </div>
+      <div class="vendu-card r">
+        <div class="vendu-img"><img src="https://cdn.safti.fr/bien-photo/41/44/1444602/b2998097030e251494c3310b5c6fe77abc4b1f6a/g.jpg" alt="Vendu" loading="lazy"><div class="vendu-stamp"><span>Vendu</span></div></div>
+        <div class="vendu-body"><div class="vendu-type">Maison</div><div class="vendu-desc">6 pièces · 145 m² · 1 500 m² terrain</div><div class="vendu-lieu">Sèvres-Anxaumont (86800)</div></div>
+      </div>
+      <div class="vendu-card r d1">
+        <div class="vendu-img"><img src="https://cdn.safti.fr/bien-photo/41/94/1494236/83a8a1b20c95d8098930aace1f29c1bf36e5b56c/g.jpg" alt="Vendu" loading="lazy"><div class="vendu-stamp"><span>Vendu</span></div></div>
+        <div class="vendu-body"><div class="vendu-type">Maison</div><div class="vendu-desc">5 pièces · 114 m² · 997 m² terrain</div><div class="vendu-lieu">Sanxay (86600)</div></div>
+      </div>
+      <div class="vendu-card r d2">
+        <div class="vendu-img"><img src="https://cdn.safti.fr/bien-photo/41/67/1467833/33a271d053c0e3185b89c2d812f43dc2383aa425/rg_nobn-3.jpg" alt="Vendu" loading="lazy"><div class="vendu-stamp"><span>Vendu</span></div></div>
+        <div class="vendu-body"><div class="vendu-type">Appartement</div><div class="vendu-desc">4 pièces · 75 m²</div><div class="vendu-lieu">Toulouse (31100)</div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:1.5rem">
+      <a href="https://www.safti.fr/votre-conseiller-safti/valentin-thibault" target="_blank" class="see-all">Voir tous mes succès →</a>
+    </div>
+  </div>
+</section>
+
+<!-- APPROCHE -->
+<section id="approche" class="section">
+  <div class="section-inner">
+    <div class="approche-grid">
+      <div class="approche-left">
+        <div class="sec-tag r" style="--sec-tag-color:rgba(240,176,122,.9)"><div class="sec-tag-dash" style="background:rgba(240,176,122,.9)"></div><span class="sec-tag-txt" style="color:rgba(240,176,122,.9)">Mon engagement</span></div>
+        <h2 class="">Un conseiller <em>vraiment</em> à vos côtés.</h2>
+        <p class="approche-intro r d2">Mon rôle est de vous <strong>accompagner de la réflexion initiale jusqu'à la signature</strong>. Pas de passage de relais — je suis votre interlocuteur unique, disponible et réactif à chaque étape.</p>
+        <div class="approche-contacts r d3">
+          <div class="approche-contact"><div class="contact-ico">📞</div><a href="tel:0786861226">07 86 86 12 26</a></div>
+          <div class="approche-contact"><div class="contact-ico">✉</div><a href="mailto:valentin.thibault@safti.fr">valentin.thibault@safti.fr</a></div>
+          <div class="approche-contact"><div class="contact-ico">📍</div><span>EI · Agent commercial · 845 121 466 RSAC Poitiers</span></div>
+        </div>
+      </div>
+      <div class="piliers">
+        <div class="pilier r"><div class="pilier-num">01</div><div><h3>Connaissance du marché local</h3><p>Je suis actif chaque jour sur le secteur Poitiers et alentours. Je connais les prix réels, pas seulement les prix affichés.</p></div></div>
+        <div class="pilier r d1"><div class="pilier-num">02</div><div><h3>Suivi personnalisé & réactivité</h3><p>Vous traitez directement avec moi du début à la fin. Je réponds vite et je m'adapte à vos disponibilités.</p></div></div>
+        <div class="pilier r d2"><div class="pilier-num">03</div><div><h3>Force du réseau SAFTI</h3><p>Derrière moi : +6 500 conseillers, des outils innovants et une diffusion massive de vos annonces à l'échelle nationale.</p></div></div>
+        <div class="pilier r d3"><div class="pilier-num">04</div><div><h3>Estimation gratuite & sans engagement</h3><p>Je me déplace chez vous, j'analyse votre bien et vous donne une estimation honnête — sans rien vous devoir.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section id="temoignages" class="section">
+  <div class="section-inner">
+    <div>
+      <div class="sec-tag"><div class="sec-tag-dash"></div><span class="sec-tag-txt">22 témoignages clients</span></div>
+      <h2>Ce qu'ils disent <em>de moi</em></h2>
+    </div>
+    <div class="temo-grid">
+
+      <!-- FEATURED — recommandation pro + résultat en temps record -->
+      <div class="temo temo-featured">
+        <div class="temo-stars">★★★★★</div>
+        <div class="temo-date">8 mars 2026</div>
+        <div class="temo-title">Vous pouvez lui confier la vente de votre bien les yeux fermés</div>
+        <p class="temo-txt">J'ai eu le plaisir de collaborer avec M. Thibault dans le cadre d'une de mes missions de recherche. Il a fait preuve d'une <strong>grande réactivité, de beaucoup de professionnalisme et de transparence</strong>, ce qui a permis à ma cliente de trouver une maison pour sa maman en un temps record. Vendeurs, vos biens sont entre de bonnes mains.</p>
+        <div class="temo-author"><div class="temo-av" style="background:rgba(255,255,255,.2)">AL</div><div><div class="temo-name">Aurélie Lamy</div><div class="temo-lieu">Conseillère immobilière · Niort</div></div></div>
+      </div>
+
+      <!-- Vente à distance — argument unique pour propriétaires éloignés -->
+      <div class="temo">
+        <div class="temo-stars">★★★★★</div>
+        <div class="temo-date">2026</div>
+        <div class="temo-title">Professionnel même à 400 km de distance</div>
+        <p class="temo-txt">Merci à Valentin d'avoir <strong>géré efficacement la vente de notre appartement alors que nous nous trouvions à 400 km</strong>. Toute confiance en son professionnalisme, même à distance.</p>
+        <div class="temo-author"><div class="temo-av">PT</div><div><div class="temo-name">Pecot Thomas</div><div class="temo-lieu">Chalou-Moulineux</div></div></div>
+      </div>
+
+      <!-- Vente rapide + disponibilité + énergie -->
+      <div class="temo">
+        <div class="temo-stars">★★★★★</div>
+        <div class="temo-date">2026</div>
+        <div class="temo-title">Vendu très rapidement, accompagnement au top</div>
+        <p class="temo-txt">Un grand merci à Valentin Thibault pour son professionnalisme ! Il a <strong>vendu notre maison très rapidement</strong> et a su se montrer extrêmement disponible, réactif et toujours plein d'entrain. Un accompagnement au top du début à la fin !</p>
+        <div class="temo-author"><div class="temo-av">★</div><div><div class="temo-name">Client vérifié SAFTI</div><div class="temo-lieu">Poitiers</div></div></div>
+      </div>
+
+      <!-- Sans pression, honnêteté — rassure les indécis -->
+      <div class="temo">
+        <div class="temo-stars">★★★★★</div>
+        <div class="temo-date">27 décembre 2025</div>
+        <div class="temo-title">Professionnel, honnête et sans pression</div>
+        <p class="temo-txt">Très bon contact, <strong>excellent professionnalisme</strong>. Il n'influence pas le jugement et répond précisément aux questions. Exactement ce qu'on attend d'un bon conseiller. Merci beaucoup !</p>
+        <div class="temo-author"><div class="temo-av">JF</div><div><div class="temo-name">JF Mandon</div><div class="temo-lieu">Poitiers</div></div></div>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:1.8rem">
+      <a href="https://www.safti.fr/votre-conseiller-safti/valentin-thibault" target="_blank" class="see-all">Lire les 22 témoignages sur SAFTI →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="section-inner">
+    <div class="contact-wrap">
+      <div class="sec-tag r" style="justify-content:center"><div class="sec-tag-dash"></div><span class="sec-tag-txt">Gratuit &amp; sans engagement</span></div>
+      <h2 class="">Estimons votre bien <em>ensemble</em></h2>
+      <p class="contact-sub r d2">Je me déplace chez vous, j'analyse votre bien et vous donne une estimation honnête basée sur le marché réel de votre secteur.</p>
+      <div class="contact-form r d2">
+        <!-- FORMSPREE : remplacez VOTRE_ID par votre identifiant Formspree -->
+        <form id="estim-form" action="https://formspree.io/f/VOTRE_ID" method="POST">
+          <div class="form-row">
+            <div class="form-group"><label>Prénom &amp; nom</label><input type="text" name="nom" placeholder="Marie Dupont" required></div>
+            <div class="form-group"><label>Téléphone</label><input type="tel" name="telephone" placeholder="06 12 34 56 78" required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="marie@email.fr" required></div>
+            <div class="form-group"><label>Type de bien</label>
+              <select name="type_de_bien">
+                <option>Maison individuelle</option>
+                <option>Appartement</option>
+                <option>Terrain</option>
+                <option>Autre</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group form-full" style="margin-bottom:1rem"><label>Message (optionnel)</label><textarea name="message" rows="3" placeholder="Secteur, superficie, votre projet…"></textarea></div>
+          <div id="form-success" style="display:none;background:#edfbf4;border:1px solid #b7e8ce;color:#1a7a4a;padding:.9rem 1.2rem;border-radius:6px;font-size:.88rem;margin-bottom:.8rem;font-weight:500">
+            ✓ Votre demande a bien été envoyée ! Valentin vous contactera sous 2h.
+          </div>
+          <div id="form-error" style="display:none;background:#fef2f2;border:1px solid #fca5a5;color:#b91c1c;padding:.9rem 1.2rem;border-radius:6px;font-size:.88rem;margin-bottom:.8rem;">
+            Une erreur est survenue. Appelez directement le 07 86 86 12 26.
+          </div>
+          <button type="submit" class="btn-submit" id="form-btn">Demander mon estimation gratuite →</button>
+        </form>
+      </div>
+      <div class="contact-reassurance r d3">
+        <span class="reassurance">Gratuit et sans engagement</span>
+        <span class="reassurance">Déplacement à domicile</span>
+        <span class="reassurance">Réponse sous 2h</span>
+      </div>
+      <div class="contact-direct r d3">
+        <a href="tel:0786861226">📞 07 86 86 12 26</a>
+        <a href="mailto:valentin.thibault@safti.fr">✉ valentin.thibault@safti.fr</a>
+        <a href="https://www.safti.fr/votre-conseiller-safti/valentin-thibault" target="_blank">🌐 Mon profil SAFTI</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Valentin <span>Thibault</span></div>
+  <ul class="footer-links">
+    <li><a href="tel:0786861226">07 86 86 12 26</a></li>
+    <li><a href="mailto:valentin.thibault@safti.fr">valentin.thibault@safti.fr</a></li>
+    <li><a href="https://www.safti.fr/votre-conseiller-safti/valentin-thibault" target="_blank">Profil SAFTI</a></li>
+  </ul>
+  <div class="footer-safti">EI · Agent commercial · RSAC Poitiers 845 121 466</div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// Formspree AJAX submit
+const form = document.getElementById('estim-form');
+if (form) {
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('form-btn');
+    const ok  = document.getElementById('form-success');
+    const err = document.getElementById('form-error');
+    btn.textContent = 'Envoi en cours…';
+    btn.disabled = true;
+    ok.style.display = 'none';
+    err.style.display = 'none';
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        ok.style.display = 'block';
+        form.reset();
+        btn.textContent = 'Demande envoyée ✓';
+      } else {
+        err.style.display = 'block';
+        btn.textContent = 'Demander mon estimation gratuite →';
+        btn.disabled = false;
+      }
+    } catch {
+      err.style.display = 'block';
+      btn.textContent = 'Demander mon estimation gratuite →';
+      btn.disabled = false;
+    }
+  });
+}
+
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('v'); });
+}, { 

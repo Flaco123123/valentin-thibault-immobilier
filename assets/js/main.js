@@ -37,7 +37,7 @@ if (form) {
   });
 }
 
-const io = new IntersectionObserver(entries => {
+window.io = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('v'); });
 }, { threshold: 0.15 });
-document.querySelectorAll('.r').forEach(el => io.observe(el));
+document.querySelectorAll('.r').forEach(el => window.io.observe(el));

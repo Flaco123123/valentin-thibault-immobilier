@@ -252,3 +252,7 @@ footer{background:var(--ink);padding:1.8rem 2.5rem;display:flex;align-items:cent
   footer{flex-direction:column;text-align:center}
   .footer-links{justify-content:center}
 }
+
+/* ── UTILITAIRES ── */
+a.vendu-card{text-decoration:none;color:inherit;display:block}
+.star{color:#f0a030}

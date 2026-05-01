@@ -9,8 +9,10 @@ fetch('data/vendus.json')
     grid.innerHTML = data.vendus.map(function(v, i) {
       var delay = delays[i % 3];
       var alt = v.type + ' vendu ' + v.description + ' ' + v.localite + ' – Valentin Thibault SAFTI';
+      var tag   = v.url_safti ? 'a' : 'div';
+      var attrs = v.url_safti ? ' href="' + v.url_safti + '" target="_blank"' : '';
 
-      return '<div class="vendu-card r' + delay + '">'
+      return '<' + tag + attrs + ' class="vendu-card r' + delay + '">'
         + '<div class="vendu-img">'
         + '<img src="' + v.photo + '" alt="' + alt + '" loading="lazy">'
         + '<div class="vendu-stamp"><span>Vendu</span></div>'
@@ -20,7 +22,7 @@ fetch('data/vendus.json')
         + '<div class="vendu-desc">' + v.description + '</div>'
         + '<div class="vendu-lieu">' + v.localite + ' (' + v.code_postal + ')</div>'
         + '</div>'
-        + '</div>';
+        + '</' + tag + '>';
     }).join('');
 
     grid.querySelectorAll('.r').forEach(function(el) {

@@ -2,39 +2,48 @@
   "temoignages": [
     {
       "featured": true,
-      "initiales": "AL",
-      "auteur": "Aurélie Lamy",
-      "lieu": "Conseillère immobilière · Niort",
-      "date": "8 mars 2026",
-      "titre": "Vous pouvez lui confier la vente de votre bien les yeux fermés",
-      "texte": "J'ai eu le plaisir de collaborer avec M. Thibault dans le cadre d'une de mes missions de recherche. Il a fait preuve d'une <strong>grande réactivité, de beaucoup de professionnalisme et de transparence</strong>, ce qui a permis à ma cliente de trouver une maison pour sa maman en un temps record. Vendeurs, vos biens sont entre de bonnes mains."
-    },
-    {
-      "featured": false,
-      "initiales": "PT",
-      "auteur": "Pecot Thomas",
-      "lieu": "Chalou-Moulineux",
-      "date": "2026",
-      "titre": "Professionnel même à 400 km de distance",
-      "texte": "Merci à Valentin d'avoir <strong>géré efficacement la vente de notre appartement alors que nous nous trouvions à 400 km</strong>. Toute confiance en son professionnalisme, même à distance."
-    },
-    {
-      "featured": false,
-      "initiales": "★",
-      "auteur": "Client vérifié SAFTI",
+      "initiales": "HE",
+      "auteur": "Hélène",
       "lieu": "Poitiers",
-      "date": "2026",
-      "titre": "Vendu très rapidement, accompagnement au top",
+      "date": "27 novembre 2025",
+      "titre": "Un accompagnement au top du début à la fin !",
       "texte": "Un grand merci à Valentin Thibault pour son professionnalisme ! Il a <strong>vendu notre maison très rapidement</strong> et a su se montrer extrêmement disponible, réactif et toujours plein d'entrain. Un accompagnement au top du début à la fin !"
     },
     {
       "featured": false,
-      "initiales": "JF",
-      "auteur": "JF Mandon",
+      "initiales": "CH",
+      "auteur": "Christophe",
       "lieu": "Poitiers",
-      "date": "27 décembre 2025",
-      "titre": "Professionnel, honnête et sans pression",
-      "texte": "Très bon contact, <strong>excellent professionnalisme</strong>. Il n'influence pas le jugement et répond précisément aux questions. Exactement ce qu'on attend d'un bon conseiller. Merci beaucoup !"
+      "date": "23 mars 2026",
+      "titre": "Une expérience exceptionnelle",
+      "texte": "M. Thibault s'est montré <strong>extrêmement professionnel et serviable</strong>. Il m'a aidé à chaque étape du processus d'achat et on peut compter sur lui pour répondre à tous vos besoins. Je ne saurais trop le remercier."
+    },
+    {
+      "featured": false,
+      "initiales": "ML",
+      "auteur": "Mary Lovejoy-Black",
+      "lieu": "Poitiers",
+      "date": "16 avril 2026",
+      "titre": "Une expérience très positive dès le début",
+      "texte": "J'ai eu une expérience très positive dès le début de mon projet immobilier. M. Thibault est <strong>un très bon négociateur et toujours disponible</strong> pour répondre aux questions. Le dossier était très bien préparé et tout s'est bien passé auprès du notaire."
+    },
+    {
+      "featured": false,
+      "initiales": "BF",
+      "auteur": "Brigitte Faucher",
+      "lieu": "Poitiers",
+      "date": "1er janvier 2024",
+      "titre": "Rapidité et écoute",
+      "texte": "M. Thibault m'a été recommandé par un ami agent immobilier sur un autre secteur. Il a su <strong>comprendre l'urgence de ma demande et s'est rendu disponible</strong> pour me rencontrer et mettre ma maison en vente dans des délais extrêmement rapides. Sympathique, disponible, à l'écoute."
+    },
+    {
+      "featured": false,
+      "initiales": "MM",
+      "auteur": "Mathilde Montier",
+      "lieu": "Poitiers",
+      "date": "4 mai 2022",
+      "titre": "Super boulot",
+      "texte": "M. Thibault est un bon conseiller immobilier. Il a <strong>vite trouvé un acquéreur pour mon bien malgré son côté atypique</strong> et avec des travaux à faire. De plus, il est cordial, chaleureux et disponible. Je suis vraiment satisfaite de la prestation. C'est certainement vers lui que je me tournerais si je dois acheter ou vendre un bien dans le secteur."
     }
   ]
 }

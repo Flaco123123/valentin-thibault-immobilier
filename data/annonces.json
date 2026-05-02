@@ -32,13 +32,13 @@
     },
     {
       "type": "Maison",
-      "prix": "274 000 €",
-      "localite": "Iteuil",
-      "code_postal": "86240",
-      "specs": ["6 pièces", "155 m²", "1 224 m²"],
-      "badges": [],
-      "url_safti": "https://www.safti.fr/annonces/achat/maison/iteuil-86240/1445758",
-      "photo": "https://cdn.safti.fr/bien-photo/41/45/1445758/777284579e2cda0775ad3b83aaaa45cc9e1095fb/g.jpg"
+      "prix": "239 000 €",
+      "localite": "Saint-Benoît",
+      "code_postal": "86280",
+      "specs": ["4 pièces", "125 m²", "466 m² terrain"],
+      "badges": ["exclusivite"],
+      "url_safti": "https://www.safti.fr/annonces/achat/maison/saint-benoit-86280/1636625",
+      "photo": "https://cdn.safti.fr/bien-photo/61/36/1636625/3dbf36e48efb0f9f10b0fd161ac220f85f8451b3/rg_nobn.jpg"
     },
     {
       "type": "Appartement",

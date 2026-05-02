@@ -1,7 +1,7 @@
 # Valentin Thibault — Conseiller Immobilier SAFTI · Poitiers
 
 Site professionnel de génération de leads pour estimations immobilières.  
-Publié sur **GitHub Pages** : https://flaco123123.github.io/valentin-thibault-immobilier/
+Publié sur **GitHub Pages** : https://valentinthibault-immobilier.fr/
 
 ---
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://flaco123123.github.io/valentin-thibault-immobilier/sitemap.xml
+Sitemap: https://valentinthibault-immobilier.fr/sitemap.xml
